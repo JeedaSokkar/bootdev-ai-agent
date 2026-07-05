@@ -11,12 +11,12 @@ class Calculator:
             "*": lambda a, b: a * b,
             "/": lambda a, b: a / b,
         }
-        
+        # Correct precedence: higher value means higher precedence
         self.precedence = {
-         "+": 3,
-         "-": 3,
-         "*": 4,
-         "/": 4,
+            "+": 1,
+            "-": 1,
+            "*": 2,
+            "/": 2,
         }
 
     def evaluate(self, expression: str) -> float | None:
